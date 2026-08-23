@@ -9,4 +9,6 @@ public class library {
         Books B = new Books(bid, name, Aname, price);
         book.add(B);
     }
+    public void Removebook(){}
+    
 }
