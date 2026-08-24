@@ -25,6 +25,14 @@ public class library {
         }
         return null;
     }
-    public void update(int bid){}
+    public void update(int bid){
+
+        for(Books b : book){
+            if(b.getId() == bid){
+
+            }
+        }
+
+    }
     
 }
