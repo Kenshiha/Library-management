@@ -10,4 +10,8 @@ public class Books {
             this.Author = Author;
             this.Price = Price;
         }
+
+        public int getId(){
+            return Bid;
+        }
 }
