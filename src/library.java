@@ -25,11 +25,23 @@ public class library {
         }
         return null;
     }
-    public void update(int bid){
+    public void updateBook(int existingId, Integer newId, String name, String authorName, Integer price){
 
         for(Books b : book){
-            if(b.getId() == bid){
+            if(b.getId() == existingId){
 
+                if(newId != null){
+                    b.setId(newId);
+                }
+                if(name != null){
+                    b.setName(name);
+                }
+                if(authorName != null){
+                    b.setAuthor(authorName);
+                }
+                if(price != null){
+                    b.setPrice(price);
+                }
             }
         }
 

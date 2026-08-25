@@ -14,4 +14,17 @@ public class Books {
         public int getId(){
             return Bid;
         }
+        public void setId(int newId){
+            this.Bid = newId;
+        }
+        public void setName(String name){
+            this.Name = name;
+        }
+        public void setAuthor(String author){
+            this.Author = author ;
+        }
+        public void setPrice(int price){
+            this.Price = price;
+        }
+
 }
