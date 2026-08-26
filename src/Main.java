@@ -5,7 +5,11 @@ public class Main {
 
             library library = new library();
 
-            library.Addbook(1,"Harry", "J.J", 9999);
+            library.addBook(1,"Harry", "J.J", 9999);
+            library.addBook(2,"GOT", "M.M", 9999);
+            library.addBook(3,"Jones", "David", 9999);
+            library.addBook(4,"Dune", "Martin", 9999);
+            library.updateBook(2,6, "Track", "Luthor", 9888);
 
     }
 }
