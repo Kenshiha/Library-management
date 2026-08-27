@@ -11,5 +11,7 @@ public class Main {
             library.addBook(4,"Dune", "Martin", 9999);
             library.updateBook(2,6, "Track", "Luthor", 9888);
 
+            Books b = library.search(6);
+            System.out.println(b);
     }
 }

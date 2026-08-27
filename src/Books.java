@@ -27,4 +27,10 @@ public class Books {
             this.Price = price;
         }
 
+        @Override
+        public String toString(){
+            return "BID: " + Bid + ", Book Name: " + Name +
+                    ", Author Name: " + Author + ", Price: " + Price;
+        }
+
 }
