@@ -32,6 +32,7 @@ public class library {
 
                 if(newId != null){
                     b.setId(newId);
+
                 }
                 if(name != null){
                     b.setName(name);

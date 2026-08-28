@@ -29,8 +29,9 @@ public class Books {
 
         @Override
         public String toString(){
-            return "BID: " + Bid + ", Book Name: " + Name +
-                    ", Author Name: " + Author + ", Price: " + Price;
+            return "BID: " + Bid +  ", Book Name: " + Name +
+                    ", Author Name: " + Author +
+                    ", Price: " + Price;
         }
 
 }
