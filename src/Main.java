@@ -3,6 +3,13 @@
 public class Main {
     public static void main(String[] args) {
 
+            System.out.println("Menu");
+            System.out.println("Add Book = 1");
+            System.out.println("Remove Book = 2");
+            System.out.println("Update Book = 3");
+            System.out.println("Search Book = 4");
+            System.out.println("Exit = 9");
+
             library library = new library();
 
             library.addBook(1,"Harry", "J.J", 9999);
