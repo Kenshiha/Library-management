@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-            Scanner sc = new Scanner(System.in);
+        library library = new library();
+
+        Scanner sc = new Scanner(System.in);
 
             System.out.println("Menu");
             System.out.println("Add Book = 1");
@@ -14,16 +16,68 @@ public class Main {
             System.out.println("Search Book = 4");
             System.out.println("Exit = 9");
 
+            while (true){
+                System.out.print("Chose Operation = ");
+                int num = sc.nextInt();
 
-            library library = new library();
+                if(num == 9){
+                    System.out.print("Exiting Program..");
+                    break;
+                }
 
-            library.addBook(1,"Harry", "J.J", 9999);
-            library.addBook(2,"GOT", "M.M", 9999);
-            library.addBook(3,"Jones", "David", 9999);
-            library.addBook(4,"Dune", "Martin", 9999);
-            library.updateBook(2,6, "Track", "Luthor", 9888);
+                if(num == 1){
+                    System.out.print("Enter Book ID:");
+                    int bid = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Enter Book Name:");
+                    String bname = sc.nextLine();
+                    System.out.print("Enter Author Name:");
+                    String aname = sc.nextLine();
+                    System.out.print("Enter Price:");
+                    int price = sc.nextInt();
 
-            Books b = library.search(6);
-            System.out.println(b);
+                    library.addBook(bid,bname,aname,price);
+                    System.out.println("Book Added Succesfully");
+                }
+                if(num == 2){
+                    System.out.print("Enter Book ID:");
+                    int bid = sc.nextInt();
+
+                    library.removeBook(bid);
+                    System.out.println("Book Removed");
+                }
+                if(num == 3){
+                    System.out.print("Enter Old Book ID:");
+                    int oldId = sc.nextInt();
+                    System.out.print("Enter New Book ID:");
+                    Integer newId = sc.nextInt();
+                    System.out.print("Enter Book Name:");
+                    String bname = sc.nextLine();
+                    System.out.print("Enter Author Name:");
+                    String aname = sc.nextLine();
+                    System.out.print("Enter Price:");
+                    int price = sc.nextInt();
+
+                    library.updateBook(oldId, newId, bname, aname, price);
+                    System.out.println("Book Updated");
+                }
+                if(num == 4){
+                    System.out.print("Enter Book ID:");
+                    int bid = sc.nextInt();
+
+                    library.search(bid);
+                }
+            }
+//
+//            library.addBook(1,"Harry", "J.J", 9999);
+//            library.addBook(2,"GOT", "M.M", 9999);
+//            library.addBook(3,"Jones", "David", 9999);
+//            library.addBook(4,"Dune", "Martin", 9999);
+//            library.updateBook(2,6, "Track", "Luthor", 9888);
+//
+//            Books b = library.search(6);
+//            System.out.println(b);
+
+            sc.close();
     }
 }

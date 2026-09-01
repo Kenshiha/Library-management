@@ -20,6 +20,7 @@ public class library {
     public Books search(int bid){
         for(Books b : book){
             if(b.getId() == bid){
+                System.out.println(b);
                 return b;
             }
         }
