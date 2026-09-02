@@ -29,10 +29,13 @@ public class Main {
                     System.out.print("Enter Book ID:");
                     int bid = sc.nextInt();
                     sc.nextLine();
+
                     System.out.print("Enter Book Name:");
                     String bname = sc.nextLine();
+
                     System.out.print("Enter Author Name:");
                     String aname = sc.nextLine();
+
                     System.out.print("Enter Price:");
                     int price = sc.nextInt();
 
@@ -69,14 +72,6 @@ public class Main {
                 }
             }
 //
-//            library.addBook(1,"Harry", "J.J", 9999);
-//            library.addBook(2,"GOT", "M.M", 9999);
-//            library.addBook(3,"Jones", "David", 9999);
-//            library.addBook(4,"Dune", "Martin", 9999);
-//            library.updateBook(2,6, "Track", "Luthor", 9888);
-//
-//            Books b = library.search(6);
-//            System.out.println(b);
 
             sc.close();
     }
