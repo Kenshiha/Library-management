@@ -39,7 +39,10 @@ public class Main {
                     System.out.print("Enter Price:");
                     int price = sc.nextInt();
 
-                    library.addBook(bid,bname,aname,price);
+                    System.out.println("Enter Quantity: ");
+                    int quantity = sc.nextInt();
+
+                    library.addBook(bid,bname,aname,price,quantity);
                     System.out.println("Book Added Succesfully");
                 }
                 if(num == 2){

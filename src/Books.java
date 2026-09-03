@@ -3,12 +3,14 @@ public class Books {
     String Name;
     String Author;
     int Price;
+    int Quantity;
 
-        Books(int Bid, String Name, String Author, int Price){
+        Books(int Bid, String Name, String Author, int Price, int Quantity){
             this.Bid = Bid;
             this.Name = Name;
             this.Author = Author;
             this.Price = Price;
+            this.Quantity = Quantity;
         }
 
         public int getId(){
@@ -26,13 +28,17 @@ public class Books {
         public void setPrice(int price){
             this.Price = price;
         }
+        public void setQuantity(int quantity){
+            this.Quantity = quantity;
+        }
 
         @Override
         public String toString(){
             return "BID: " + Bid +
                     ", Book Name: " + Name +
                     ", Author Name: " + Author +
-                    ", Price: " + Price;
+                    ", Price: " + Price +
+                    "Quantity" + Quantity;
 
         }
 

@@ -4,9 +4,9 @@ public class library {
 
     ArrayList<Books> book = new ArrayList<>();
 
-    public void addBook(int bid, String name, String Aname, int price){
+    public void addBook(int bid, String name, String Aname, int price, int quantity){
 
-        Books B = new Books(bid, name, Aname, price);
+        Books B = new Books(bid, name, Aname, price, quantity);
         book.add(B);
     }
     public void removeBook(int bid){
@@ -26,7 +26,7 @@ public class library {
         }
         return null;
     }
-    public void updateBook(int existingId, Integer newId, String name, String authorName, Integer price){
+    public void updateBook(int existingId, Integer newId, String name, String authorName, Integer price, Integer quantity){
 
         for(Books b : book){
             if(b.getId() == existingId){
@@ -43,6 +43,9 @@ public class library {
                 }
                 if(price != null){
                     b.setPrice(price);
+                }
+                if(quantity != null){
+                    b.setQuantity(quantity);
                 }
             }
         }
