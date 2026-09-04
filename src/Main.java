@@ -63,8 +63,10 @@ public class Main {
                     String aname = sc.nextLine();
                     System.out.print("Enter Price:");
                     int price = sc.nextInt();
+                    System.out.println("Enter Quantity: ");
+                    int quantity = sc.nextInt();
 
-                    library.updateBook(oldId, newId, bname, aname, price);
+                    library.updateBook(oldId, newId, bname, aname, price,quantity);
                     System.out.println("Book Updated");
                 }
                 if(num == 4){
