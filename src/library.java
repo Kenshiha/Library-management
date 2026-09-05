@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class library {
 
     ArrayList<Books> book = new ArrayList<>();
+    ArrayList<Member> member = new ArrayList<>();
 
     public void addBook(int bid, String name, String Aname, int price, int quantity){
 
@@ -50,6 +51,11 @@ public class library {
             }
         }
 
+    }
+
+    void addMember(int id, String name){
+        Member m = new Member(id,name);
+        member.add(m);
     }
     
 }
