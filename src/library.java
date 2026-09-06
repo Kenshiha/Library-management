@@ -57,5 +57,13 @@ public class library {
         Member m = new Member(id,name);
         member.add(m);
     }
+    void removeMember(int id){
+        for(int i = 0; i < member.size(); i++){
+            if(member.get(i).getId() == id){
+                removeMember(id);
+                break;
+            }
+        }
+    }
     
 }
