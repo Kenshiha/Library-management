@@ -13,7 +13,7 @@ public class library {
     public void removeBook(int bid){
         for(int i = 0; i < book.size(); i++){
             if(book.get(i).getId() == bid){
-                removeBook(i);
+                book.remove(i);
                 break;
             }
         }
@@ -60,10 +60,11 @@ public class library {
     void removeMember(int id){
         for(int i = 0; i < member.size(); i++){
             if(member.get(i).getId() == id){
-                removeMember(id);
+                member.remove(i);
                 break;
             }
         }
     }
+
     
 }
