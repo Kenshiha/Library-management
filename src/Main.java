@@ -14,6 +14,8 @@ public class Main {
             System.out.println("Remove Book = 2");
             System.out.println("Update Book = 3");
             System.out.println("Search Book = 4");
+            System.out.println("Add Member = 5");
+            System.out.println("Remove Member = 6");
             System.out.println("Exit = 9");
 
             while (true){
@@ -74,6 +76,15 @@ public class Main {
                     int bid = sc.nextInt();
 
                     library.search(bid);
+                }
+                if(num == 5){
+                    System.out.println("Enter ID:");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("Enter Name:");
+                    String name = sc.nextLine();
+
+                    library.addMember(id, name);
                 }
             }
 //
