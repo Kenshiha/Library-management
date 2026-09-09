@@ -78,13 +78,19 @@ public class Main {
                     library.search(bid);
                 }
                 if(num == 5){
-                    System.out.println("Enter ID:");
+                    System.out.print("Enter ID:");
                     int id = sc.nextInt();
                     sc.nextLine();
-                    System.out.println("Enter Name:");
+                    System.out.print("Enter Name:");
                     String name = sc.nextLine();
 
                     library.addMember(id, name);
+                }
+                if(num == 6){
+                    System.out.println("Enter Member ID:");
+                    int id = sc.nextInt();
+
+                    library.removeMember(id);
                 }
             }
 //
