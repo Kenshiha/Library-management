@@ -31,6 +31,9 @@ public class Books {
         public void setQuantity(int quantity){
             this.Quantity = quantity;
         }
+        public int getQuantity(){
+            return Quantity;
+        }
 
         @Override
         public String toString(){

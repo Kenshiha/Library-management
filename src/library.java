@@ -67,5 +67,28 @@ public class library {
         }
     }
 
+    void borrow(int mid, int bid, int qty){
+        Borrow b = new Borrow(mid, bid, qty);
 
+        for(Books book : book){
+            if(book.getId() == bid){
+
+                int totalBook = book.getQuantity();
+                if(totalBook <= 0){
+                    System.out.println( book.Name + "is currently out of stock!");
+                    return;
+                }
+
+                if(totalBook < qty){
+                    System.out.println("Not Enough Books");
+                    return;
+                }
+
+                book.setQuantity(totalBook - qty);
+                borrow.add(b);
+                return;
+            }
+        }
+        System.out.println("Book Not Found!!");
+    }
 }
