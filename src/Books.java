@@ -38,7 +38,7 @@ public class Books {
                     ", Book Name: " + Name +
                     ", Author Name: " + Author +
                     ", Price: " + Price +
-                    "Quantity" + Quantity;
+                    ", Quantity" + Quantity;
 
         }
 

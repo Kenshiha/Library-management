@@ -4,6 +4,7 @@ public class library {
 
     ArrayList<Books> book = new ArrayList<>();
     ArrayList<Member> member = new ArrayList<>();
+    ArrayList<Borrow> borrow = new ArrayList<>();
 
     public void addBook(int bid, String name, String Aname, int price, int quantity){
 
@@ -65,5 +66,6 @@ public class library {
             }
         }
     }
+
 
 }
