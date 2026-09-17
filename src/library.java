@@ -91,4 +91,17 @@ public class library {
         }
         System.out.println("Book Not Found!!");
     }
+
+    void returnBook(int mid, int bid, int qty){
+        for(Borrow b : borrow){
+          //  if(b.getMid());
+        }
+    }
+    void removeBorrow(int mid){
+        for(int i = 0; i < borrow.size(); i++){
+            if(borrow.get(i).getMid() == mid){
+                borrow.remove(i);
+            }
+        }
+    }
 }

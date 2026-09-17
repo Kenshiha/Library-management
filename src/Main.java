@@ -16,6 +16,8 @@ public class Main {
             System.out.println("Search Book = 4");
             System.out.println("Add Member = 5");
             System.out.println("Remove Member = 6");
+            System.out.println("Borrow Book = 7");
+            System.out.println("Return Book = 8");
             System.out.println("Exit = 9");
 
             while (true){
@@ -87,14 +89,26 @@ public class Main {
                     library.addMember(id, name);
                 }
                 if(num == 6){
-                    System.out.println("Enter Member ID:");
+                    System.out.print("Enter Member ID:");
                     int id = sc.nextInt();
 
                     library.removeMember(id);
                 }
+                if(num == 7){
+                    System.out.print("Enter Member ID:");
+                    int mid = sc.nextInt();
+
+                    System.out.print("Enter Book ID:");
+                    int bid = sc.nextInt();
+
+                    System.out.print("Enter Quantity:");
+                    int qty = sc.nextInt();
+
+                    library.borrow(mid, bid, qty);
+                }
+
             }
 //
-
             sc.close();
     }
 }
