@@ -97,9 +97,6 @@ public class library {
           //  if(b.getMid());
         }
 
-        for(Books b1 : book){
-
-        }
     }
     void removeBorrow(int mid){
         for(int i = 0; i < borrow.size(); i++){
