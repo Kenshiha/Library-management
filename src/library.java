@@ -1,11 +1,14 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class library {
 
+    Scanner sc = new Scanner(System.in);
     ArrayList<Books> book = new ArrayList<>();
     ArrayList<Member> member = new ArrayList<>();
     ArrayList<Borrow> borrow = new ArrayList<>();
-
+    ArrayList<Returned> rtn = new ArrayList<>();
+    // Books
     public void addBook(int bid, String name, String Aname, int price, int quantity){
 
         Books B = new Books(bid, name, Aname, price, quantity);
@@ -47,13 +50,13 @@ public class library {
                     b.setPrice(price);
                 }
                 if(quantity != null){
-                    b.setQuantity(quantity);
+                    b.setTotal(quantity);
                 }
             }
         }
 
     }
-
+//     Members
     void addMember(int id, String name){
         Member m = new Member(id,name);
         member.add(m);
@@ -66,7 +69,7 @@ public class library {
             }
         }
     }
-
+//Borrowing Books
     void borrow(int mid, int bid, int qty){
         Borrow b = new Borrow(mid, bid, qty);
 
@@ -92,9 +95,25 @@ public class library {
         System.out.println("Book Not Found!!");
     }
 
-    void returnBook(int mid, int bid, int qty){
+    void returnBook(int mid){
         for(Borrow b : borrow){
-          //  if(b.getMid());
+             if(b.memberId == mid){
+                 System.out.print("Enter Book ID:");
+                 int bookedId = sc.nextInt();
+
+                 if(b.memberId == mid && b.bookId == bookedId ){
+
+                     for(Books books : book){
+                         if(books.getId() == bookedId){
+                             System.out.print("Enter Quantity:");
+                             int qty = sc.nextInt();
+
+                         }
+                     }
+                 }
+
+                 //rBookId(bookId);
+             }
         }
 
     }
@@ -105,4 +124,11 @@ public class library {
             }
         }
     }
+
+  // Returning Book
+  public void addReturn(int mid, int bid, int qty){
+        Returned r = new Returned(mid,bid,qty);
+        rtn.add(r);
+  }
+
 }

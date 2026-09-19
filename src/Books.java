@@ -3,6 +3,7 @@ public class Books {
     String Name;
     String Author;
     int Price;
+    int Total;
     int Quantity;
 
         Books(int Bid, String Name, String Author, int Price, int Quantity){
@@ -11,8 +12,9 @@ public class Books {
             this.Author = Author;
             this.Price = Price;
             this.Quantity = Quantity;
+            this.Total = Quantity;
         }
-
+// For Updating Book Details
         public int getId(){
             return Bid;
         }
@@ -28,11 +30,15 @@ public class Books {
         public void setPrice(int price){
             this.Price = price;
         }
-        public void setQuantity(int quantity){
-            this.Quantity = quantity;
+        public void setTotal(int total){
+            this.Total = total;
         }
+        public void setQuantity(int qty){ this.Quantity = qty;}
         public int getQuantity(){
             return Quantity;
+        }
+        public int getTotal(){
+            return Total;
         }
 
         @Override
@@ -41,7 +47,7 @@ public class Books {
                     ", Book Name: " + Name +
                     ", Author Name: " + Author +
                     ", Price: " + Price +
-                    ", Quantity" + Quantity;
+                    ", Total" + Total;
 
         }
 
