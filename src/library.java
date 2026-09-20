@@ -108,9 +108,22 @@ public class library {
                              System.out.print("Enter Quantity:");
                              int qty = sc.nextInt();
 
+                             int totalBooks = books.getTotal();
+
+                             if(totalBooks < books.getQuantity() + qty){
+                                 System.out.println("More Books Than Taken");
+                                 return;
+                             }
+
+                             books.setQuantity(books.getQuantity() + qty);
+                             if(b.getQuantity() == 0){
+                                 removeBorrow(mid);
+                             }
+                             addReturn(mid,bookedId,qty);
                          }
                      }
                  }
+                 System.out.println("Member not found!!");
 
                  //rBookId(bookId);
              }
