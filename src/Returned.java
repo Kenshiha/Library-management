@@ -2,6 +2,7 @@ public class Returned {
     int memberId;
     int bookId;
     int quantity;
+    int time;
 
     Returned(int memberId, int bookId, int quantity){
         this.memberId = memberId;

@@ -144,4 +144,8 @@ public class library {
         rtn.add(r);
   }
 
+  public void remove(){
+
+  }
+
 }
