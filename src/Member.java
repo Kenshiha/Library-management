@@ -1,6 +1,7 @@
 public class Member {
     int id;
     String name;
+    int no;
 
     Member(int id, String name){
         this.id = id;
