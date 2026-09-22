@@ -101,7 +101,7 @@ public class library {
                  System.out.print("Enter Book ID:");
                  int bookedId = sc.nextInt();
 
-                 if(b.memberId == mid && b.bookId == bookedId ){
+                 if(b.bookId == bookedId ){
 
                      for(Books books : book){
                          if(books.getId() == bookedId){
@@ -114,8 +114,13 @@ public class library {
                                  System.out.println("More Books Than Taken");
                                  return;
                              }
-
                              books.setQuantity(books.getQuantity() + qty);
+
+                             if(qty > b.getQuantity()){
+                                 System.out.println("Member did not take this many books!!");
+                                 return;
+                             }
+                             b.setQuantity(b.getQuantity() - qty);
                              if(b.getQuantity() == 0){
                                  removeBorrow(mid);
                              }
