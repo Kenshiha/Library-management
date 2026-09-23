@@ -95,17 +95,12 @@ public class library {
         System.out.println("Book Not Found!!");
     }
 
-    void returnBook(int mid){
+    void returnBook(int mid, int bid){
 
-        Borrow borrowRecord = findBorrow(mid);
+        Borrow borrowRecord = findBorrow(mid,bid);
 
         System.out.print("Enter Book ID:");
         int bookId = sc.nextInt();
-
-        if(borrowRecord.getBid() != bookId){
-            System.out.println("Member did not Borrow that Book!!");
-            return;
-        }
 
         Books b = findBook(bookId);
 
@@ -135,9 +130,10 @@ public class library {
         return null;
     }
 
-    private Borrow findBorrow(int mid){
+    private Borrow findBorrow(int mid, int bid){
         for(Borrow member : borrow){
-            if(member.getMid() == mid){
+            if(member.getMid() == mid &&
+                member.getBid() == bid){
                 return member;
             }
         }
