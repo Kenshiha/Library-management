@@ -96,50 +96,102 @@ public class library {
     }
 
     void returnBook(int mid){
-        for(Borrow b : borrow){
-             if(b.memberId == mid){
-                 System.out.print("Enter Book ID:");
-                 int bookedId = sc.nextInt();
 
-                 if(b.bookId == bookedId ){
+        Borrow borrowRecord = findBorrow(mid);
 
-                     for(Books books : book){
-                         if(books.getId() == bookedId){
-                             System.out.print("Enter Quantity:");
-                             int qty = sc.nextInt();
+        System.out.print("Enter Book ID:");
+        int bookId = sc.nextInt();
 
-                             int totalBooks = books.getTotal();
-
-                             if(totalBooks < books.getQuantity() + qty){
-                                 System.out.println("More Books Than Taken");
-                                 return;
-                             }
-                             books.setQuantity(books.getQuantity() + qty);
-
-                             if(qty > b.getQuantity()){
-                                 System.out.println("Member did not take this many books!!");
-                                 return;
-                             }
-                             b.setQuantity(b.getQuantity() - qty);
-                             if(b.getQuantity() == 0){
-                                 removeBorrow(mid);
-                             }
-                             addReturn(mid,bookedId,qty);
-                         }
-                     }
-                 }
-                 System.out.println("Member not found!!");
-
-                 //rBookId(bookId);
-             }
+        if(borrowRecord.getBid() != bookId){
+            System.out.println("Member did not Borrow that Book!!");
+            return;
         }
 
+        Books b = findBook(bookId);
+
+        System.out.print("Enter Quantity:");
+        int qty = sc.nextInt();
+
+        if(borrowRecord.getQuantity() < qty){
+            System.out.print("More Books Than Taken!!");
+            return;
+        }
+
+        b.setQuantity(b.getQuantity() + qty);
+        borrowRecord.setQuantity(borrowRecord.getQuantity() - qty);
+
+        if(borrowRecord.getQuantity() == 0){
+            removeBorrow(mid, bookId);
+        }
+        addReturn(mid, bookId, qty);
     }
-    void removeBorrow(int mid){
-        for(int i = 0; i < borrow.size(); i++){
-            if(borrow.get(i).getMid() == mid){
-                borrow.remove(i);
+
+    private Books findBook(int bid){
+        for(Books b : book){
+            if(b.getId() == bid){
+                return  b;
             }
+        }
+        return null;
+    }
+
+    private Borrow findBorrow(int mid){
+        for(Borrow member : borrow){
+            if(member.getMid() == mid){
+                return member;
+            }
+        }
+        return null;
+    }
+
+
+//    void returnBook(int mid){
+//        for(Borrow b : borrow){
+//             if(b.memberId == mid){
+//                 System.out.print("Enter Book ID:");
+//                 int bookedId = sc.nextInt();
+//
+//                 if(b.bookId == bookedId ){
+//
+//                     for(Books books : book){
+//                         if(books.getId() == bookedId){
+//                             System.out.print("Enter Quantity:");
+//                             int qty = sc.nextInt();
+//
+//                             int totalBooks = books.getTotal();
+//
+//                             if(totalBooks < books.getQuantity() + qty){
+//                                 System.out.println("More Books Than Taken");
+//                                 return;
+//                             }
+//                             books.setQuantity(books.getQuantity() + qty);
+//
+//                             if(qty > b.getQuantity()){
+//                                 System.out.println("Member did not take this many books!!");
+//                                 return;
+//                             }
+//                             b.setQuantity(b.getQuantity() - qty);
+//                             if(b.getQuantity() == 0){
+//                                 removeBorrow(mid);
+//                             }
+//                             addReturn(mid,bookedId,qty);
+//                         }
+//                     }
+//                 }
+//                 System.out.println("Member not found!!");
+//
+//                 //rBookId(bookId);
+//             }
+//        }
+//
+//    }
+    void removeBorrow(int mid, int bid){
+        for(int i = 0; i < borrow.size(); i++){
+                if (borrow.get(i).getMid() == mid &&
+                        borrow.get(i).getBid() == bid) {
+                    borrow.remove(i);
+                    return;
+                }
         }
     }
 
