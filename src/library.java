@@ -119,9 +119,9 @@ public class library {
         borrowRecord.setQuantity(borrowRecord.getQuantity() - qty);
 
         if(borrowRecord.getQuantity() == 0){
-            removeBorrow(mid, bookId);
+            removeBorrow(mid, bid);
         }
-        addReturn(mid, bookId, qty);
+        addReturn(mid, bid, qty);
     }
 
     private Books findBook(int bid){
