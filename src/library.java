@@ -9,6 +9,7 @@ public class library {
     ArrayList<Borrow> borrow = new ArrayList<>();
     ArrayList<Returned> rtn = new ArrayList<>();
     // Books
+
     public void addBook(int bid, String name, String Aname, int price, int quantity){
 
         Books B = new Books(bid, name, Aname, price, quantity);
@@ -98,11 +99,12 @@ public class library {
     void returnBook(int mid, int bid){
 
         Borrow borrowRecord = findBorrow(mid,bid);
+        Books b = findBook(bid);
 
-        System.out.print("Enter Book ID:");
-        int bookId = sc.nextInt();
-
-        Books b = findBook(bookId);
+        if(borrowRecord == null){
+            System.out.println("Borrow Record not found");
+            return;
+        }
 
         System.out.print("Enter Quantity:");
         int qty = sc.nextInt();
@@ -113,6 +115,7 @@ public class library {
         }
 
         b.setQuantity(b.getQuantity() + qty);
+
         borrowRecord.setQuantity(borrowRecord.getQuantity() - qty);
 
         if(borrowRecord.getQuantity() == 0){
