@@ -132,6 +132,14 @@ public class library {
         }
         return null;
     }
+    private Member findMenber(int mid){
+        for(Member m : member){
+            if(m.getId() == mid){
+                return m;
+            }
+        }
+        return null;
+    }
 
     private Borrow findBorrow(int mid, int bid){
         for(Borrow member : borrow){
