@@ -84,6 +84,9 @@ public class library {
                 }
 
                 if(totalBook < qty){
+
+
+
                     System.out.println("Not Enough Books");
                     return;
                 }
@@ -94,6 +97,12 @@ public class library {
             }
         }
         System.out.println("Book Not Found!!");
+    }
+    private void findReturned(int mid){
+        for(Returned rtr : rtn){
+
+        }
+
     }
 
     void returnBook(int mid, int bid){
