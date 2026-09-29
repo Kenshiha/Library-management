@@ -117,6 +117,10 @@ public class library {
             System.out.println("Borrow Record not found");
             return;
         }
+        if(b == null){
+            System.out.println("Book Not Found!!");
+            return;
+        }
 
         System.out.print("Enter Quantity:");
         int qty = sc.nextInt();
