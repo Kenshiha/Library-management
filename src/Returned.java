@@ -9,6 +9,12 @@ public class Returned {
         this.bookId = bookId;
         this.quantity = quantity;
     }
+    private int getMid(){
+        return memberId;
+    }
+    private int getBid(){
+        return bookId;
+    }
 
     @Override
     public String toString(){
