@@ -106,6 +106,13 @@ public class Main {
 
                     library.borrow(mid, bid, qty);
                 }
+                if(num == 8){
+                    System.out.print("Enter Member ID:");
+                    int mid = sc.nextInt();
+                    System.out.print("Enter Book ID:");
+                    int bid = sc.nextInt();
+                    library.returnBook(mid,bid);
+                }
 
             }
 //
