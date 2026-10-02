@@ -32,6 +32,15 @@ public class library {
         }
         return null;
     }
+    public void bookList(){
+        for(int i = 0; i < book.size(); i++){
+            System.out.println("BID:" + book.get(i).getId() +
+                                ", Book Name:" + book.get(i).getBookName() +
+                                ", Author Name:" + book.get(i).getAuthorName() +
+                                ", Price:" + book.get(i).getPrice() +
+                                ", Total:" + book.get(i).getTotal());
+        }
+    }
     public void updateBook(int existingId, Integer newId, String name, String authorName, Integer price, Integer quantity){
 
         for(Books b : book){
@@ -39,7 +48,6 @@ public class library {
 
                 if(newId != null){
                     b.setId(newId);
-
                 }
                 if(name != null){
                     b.setName(name);

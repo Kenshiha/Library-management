@@ -40,6 +40,15 @@ public class Books {
         public int getTotal(){
             return Total;
         }
+        public String getBookName(){
+            return Name;
+        }
+        public String getAuthorName(){
+            return Author;
+        }
+        public int getPrice(){
+            return Price;
+        }
 
         @Override
         public String toString(){
@@ -47,7 +56,7 @@ public class Books {
                     ", Book Name: " + Name +
                     ", Author Name: " + Author +
                     ", Price: " + Price +
-                    ", Total" + Total;
+                    ", Total:" + Total;
 
         }
 
