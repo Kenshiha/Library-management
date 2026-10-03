@@ -8,13 +8,14 @@ public class library {
     ArrayList<Member> member = new ArrayList<>();
     ArrayList<Borrow> borrow = new ArrayList<>();
     ArrayList<Returned> rtn = new ArrayList<>();
-    // Books
 
+    // Books
     public void addBook(int bid, String name, String Aname, int price, int quantity){
 
         Books B = new Books(bid, name, Aname, price, quantity);
         book.add(B);
     }
+
     public void removeBook(int bid){
         for(int i = 0; i < book.size(); i++){
             if(book.get(i).getId() == bid){
@@ -23,6 +24,7 @@ public class library {
             }
         }
     }
+
     public Books search(int bid){
         for(Books b : book){
             if(b.getId() == bid){
@@ -30,8 +32,10 @@ public class library {
                 return b;
             }
         }
+
         return null;
     }
+    // for orinting list of books
     public void bookList(){
         for(Books b : book){
             System.out.println(b);
