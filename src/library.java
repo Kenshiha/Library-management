@@ -232,8 +232,8 @@ public class library {
         rtn.add(r);
   }
 
-  public void remove(){
-
+  public Returned findReturn(int mid){
+        return null;
   }
 
 }
