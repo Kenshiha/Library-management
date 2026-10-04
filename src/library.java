@@ -233,6 +233,11 @@ public class library {
   }
 
   public Returned findReturn(int mid){
+        for(Returned rte : rtn){
+            if(rte.getMid() == mid){
+                System.out.println(rte);
+            }
+        }
         return null;
   }
 

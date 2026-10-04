@@ -9,10 +9,10 @@ public class Returned {
         this.bookId = bookId;
         this.quantity = quantity;
     }
-    private int getMid(){
+    public int getMid(){
         return memberId;
     }
-    private int getBid(){
+    public int getBid(){
         return bookId;
     }
 
