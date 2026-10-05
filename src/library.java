@@ -106,11 +106,10 @@ public class library {
         }
         System.out.println("Book Not Found!!");
     }
+
     private void findReturned(int mid){
         for(Returned rtr : rtn){
-
         }
-
         if(mid == mid){
 
         }
@@ -174,7 +173,6 @@ public class library {
         }
         return null;
     }
-
 
 //    void returnBook(int mid){
 //        for(Borrow b : borrow){
