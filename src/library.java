@@ -107,13 +107,7 @@ public class library {
         System.out.println("Book Not Found!!");
     }
 
-    private void findReturned(int mid){
-        for(Returned rtr : rtn){
-        }
-        if(mid == mid){
 
-        }
-    }
 
     void returnBook(int mid, int bid){
 
