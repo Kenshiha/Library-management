@@ -107,8 +107,6 @@ public class library {
         System.out.println("Book Not Found!!");
     }
 
-
-
     void returnBook(int mid, int bid){
 
         Borrow borrowRecord = findBorrow(mid,bid);
@@ -168,6 +166,7 @@ public class library {
         return null;
     }
 
+
 //    void returnBook(int mid){
 //        for(Borrow b : borrow){
 //             if(b.memberId == mid){
@@ -223,14 +222,14 @@ public class library {
         Returned r = new Returned(mid,bid,qty);
         rtn.add(r);
   }
-
-  public Returned findReturn(int mid){
-        for(Returned rte : rtn){
-            if(rte.getMid() == mid){
-                System.out.println(rte);
+    private Returned findReturn(int mid){
+        for(Returned submit : rtn){
+            if(submit.getMid() == mid){
+                System.out.println(submit);
+                return submit;
             }
         }
         return null;
-  }
+    }
 
 }
