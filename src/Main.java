@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -19,6 +20,7 @@ public class Main {
             System.out.println("Borrow Book = 7");
             System.out.println("Return Book = 8");
             System.out.println("Get Books List = 10");
+            System.out.println("List of Returned Book = 11");
             System.out.println("Exit = 9");
 
             while (true){
@@ -116,6 +118,12 @@ public class Main {
                 }
                 if(num == 10){
                     library.bookList();
+                }
+                if(num == 11){
+                    System.out.print("Enter Member ID:");
+                    int mid = sc.nextInt();
+
+                    library.findReturn(mid);
                 }
 
             }

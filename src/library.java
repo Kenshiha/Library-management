@@ -222,7 +222,7 @@ public class library {
         Returned r = new Returned(mid,bid,qty);
         rtn.add(r);
   }
-    private Returned findReturn(int mid){
+    public Returned findReturn(int mid){
         for(Returned submit : rtn){
             if(submit.getMid() == mid){
                 System.out.println(submit);
