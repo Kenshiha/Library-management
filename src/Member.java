@@ -7,7 +7,6 @@ public class Member {
         this.id = id;
         this.name = name;
     }
-
     public int getId() {
         return id;
     }
@@ -18,6 +17,7 @@ public class Member {
     @Override
     public String toString(){
         return "ID: " + id +
-                "Name: "+ name;
+                "Name: "+ name +
+                "No:" + no;
     }
 }
