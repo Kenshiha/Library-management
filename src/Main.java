@@ -27,6 +27,11 @@ public class Main {
                 System.out.print("Chose Operation = ");
                 int num = sc.nextInt();
 
+                if(num > 11){
+                    System.out.println("Invalid Operation!!");
+                    break;
+                }
+
                 if(num == 9){
                     System.out.print("Exiting Program..");
                     break;
@@ -122,7 +127,6 @@ public class Main {
                 if(num == 11){
                     System.out.print("Enter Member ID:");
                     int mid = sc.nextInt();
-
                     library.findReturn(mid);
                 }
 
